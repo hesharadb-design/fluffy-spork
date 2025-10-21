@@ -1,0 +1,179 @@
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Feb  3 09:48:03 2024] ***
+compiled with version: 9.3.0 on 27 October 2021 13:42:40
+os: Linux-5.4.0-136-generic #153-Ubuntu SMP Thu Nov 24 15:56:58 UTC 2022
+nodename: studentlearn1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /var/www/html/livingarchive
+detected binary path: /usr/local/bin/uwsgi
+setgid() to 33
+setuid() to 33
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31476
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+*** starting uWSGI Emperor ***
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+open("livingarchive.log"): Permission denied [core/logging.c line 288]
+unlink(): No such file or directory [core/uwsgi.c line 1617]
+Sat Feb  3 09:48:03 2024 - [emperor] curse the uwsgi instance uwsgi.ini (pid: 1147997)
+Sat Feb  3 09:48:03 2024 - [emperor] removed uwsgi instance uwsgi.ini
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+open("livingarchive.log"): Permission denied [core/logging.c line 288]
+unlink(): No such file or directory [core/uwsgi.c line 1617]
+Sat Feb  3 09:48:06 2024 - [emperor] curse the uwsgi instance uwsgi.ini (pid: 1147998)
+Sat Feb  3 09:48:09 2024 - [emperor] removed uwsgi instance uwsgi.ini
+[emperor] *** RAGNAROK EVOKED ***
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+open("livingarchive.log"): Permission denied [core/logging.c line 288]
+unlink(): No such file or directory [core/uwsgi.c line 1617]
+Sat Feb  3 09:48:11 2024 - [emperor] removed uwsgi instance uwsgi.ini
+Sat Feb  3 09:48:11 2024 - [emperor] unloyal bad behaving vassal found: uwsgi.ini throttling it...
+Sat Feb  3 09:48:12 2024 - The Emperor is buried.
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Feb  3 09:48:57 2024] ***
+compiled with version: 9.3.0 on 27 October 2021 13:42:40
+os: Linux-5.4.0-136-generic #153-Ubuntu SMP Thu Nov 24 15:56:58 UTC 2022
+nodename: studentlearn1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /var/www/html/livingarchive
+detected binary path: /usr/local/bin/uwsgi
+setgid() to 33
+setuid() to 33
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31476
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+*** starting uWSGI Emperor ***
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+Sat Feb  3 09:48:57 2024 - [emperor] curse the uwsgi instance uwsgi.ini (pid: 1148005)
+Sat Feb  3 09:48:57 2024 - [emperor] removed uwsgi instance uwsgi.ini
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+Sat Feb  3 09:49:00 2024 - [emperor] curse the uwsgi instance uwsgi.ini (pid: 1148006)
+Sat Feb  3 09:49:00 2024 - [emperor] removed uwsgi instance uwsgi.ini
+[emperor] *** RAGNAROK EVOKED ***
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+Sat Feb  3 09:49:04 2024 - [emperor] removed uwsgi instance uwsgi.ini
+Sat Feb  3 09:49:04 2024 - [emperor] unloyal bad behaving vassal found: uwsgi.ini throttling it...
+Sat Feb  3 09:49:05 2024 - The Emperor is buried.
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Feb  3 09:51:43 2024] ***
+compiled with version: 9.3.0 on 27 October 2021 13:42:40
+os: Linux-5.4.0-136-generic #153-Ubuntu SMP Thu Nov 24 15:56:58 UTC 2022
+nodename: studentlearn1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /var/www/html/livingarchive
+detected binary path: /usr/local/bin/uwsgi
+setgid() to 33
+setuid() to 33
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31476
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+*** starting uWSGI Emperor ***
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+Sat Feb  3 09:51:43 2024 - [emperor] curse the uwsgi instance uwsgi.ini (pid: 1148019)
+Sat Feb  3 09:51:43 2024 - [emperor] removed uwsgi instance uwsgi.ini
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+Sat Feb  3 09:51:46 2024 - [emperor] curse the uwsgi instance uwsgi.ini (pid: 1148020)
+Sat Feb  3 09:51:46 2024 - [emperor] removed uwsgi instance uwsgi.ini
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+Sat Feb  3 09:51:49 2024 - [emperor] curse the uwsgi instance uwsgi.ini (pid: 1148021)
+Sat Feb  3 09:51:49 2024 - [emperor] removed uwsgi instance uwsgi.ini
+Sat Feb  3 09:51:49 2024 - [emperor] unloyal bad behaving vassal found: uwsgi.ini throttling it...
+[emperor] *** RAGNAROK EVOKED ***
+Sat Feb  3 09:51:49 2024 - The Emperor is buried.
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Feb  3 09:52:19 2024] ***
+compiled with version: 9.3.0 on 27 October 2021 13:42:40
+os: Linux-5.4.0-136-generic #153-Ubuntu SMP Thu Nov 24 15:56:58 UTC 2022
+nodename: studentlearn1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /var/www/html/livingarchive
+detected binary path: /usr/local/bin/uwsgi
+setgid() to 33
+setuid() to 33
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31476
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+*** starting uWSGI Emperor ***
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+Sat Feb  3 09:52:19 2024 - [emperor] vassal uwsgi.ini has been spawned
+Sat Feb  3 09:52:19 2024 - [emperor] vassal uwsgi.ini is ready to accept requests
+Sat Feb  3 09:52:22 2024 - [emperor] vassal uwsgi.ini is now loyal
+Sat Feb  3 09:52:22 2024 - [emperor] vassal uwsgi.ini is now loyal
+[emperor] *** RAGNAROK EVOKED ***
+Sat Feb  3 09:52:26 2024 - [emperor] stop the uwsgi instance uwsgi.ini
+Sat Feb  3 09:52:28 2024 - [emperor] removed uwsgi instance uwsgi.ini
+Sat Feb  3 09:52:29 2024 - The Emperor is buried.
+*** Starting uWSGI 2.0.23 (64bit) on [Sat Feb  3 09:53:08 2024] ***
+compiled with version: 9.4.0 on 05 November 2023 01:15:10
+os: Linux-5.4.0-136-generic #153-Ubuntu SMP Thu Nov 24 15:56:58 UTC 2022
+nodename: studentlearn1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /var/www/html/livingarchive
+detected binary path: /var/www/html/livingarchive/env/bin/uwsgi
+setgid() to 33
+setuid() to 33
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31476
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+*** starting uWSGI Emperor ***
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+Sat Feb  3 09:53:09 2024 - [emperor] vassal uwsgi.ini has been spawned
+Sat Feb  3 09:53:09 2024 - [emperor] vassal uwsgi.ini is ready to accept requests
+Sat Feb  3 09:53:13 2024 - [emperor] vassal uwsgi.ini is now loyal
+Sat Feb  3 09:53:14 2024 - [emperor] vassal uwsgi.ini is now loyal
+[emperor] *** RAGNAROK EVOKED ***
+Sat Feb  3 09:53:16 2024 - [emperor] stop the uwsgi instance uwsgi.ini
+Sat Feb  3 09:53:18 2024 - [emperor] removed uwsgi instance uwsgi.ini
+Sat Feb  3 09:53:19 2024 - The Emperor is buried.
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Feb  3 10:05:45 2024] ***
+compiled with version: 9.3.0 on 27 October 2021 13:42:40
+os: Linux-5.4.0-136-generic #153-Ubuntu SMP Thu Nov 24 15:56:58 UTC 2022
+nodename: studentlearn1
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /var/www/html/livingarchive
+detected binary path: /usr/local/bin/uwsgi
+setgid() to 33
+setuid() to 33
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31476
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+*** starting uWSGI Emperor ***
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from livingarchive.ini
+Sat Feb  3 10:05:45 2024 - [emperor] vassal livingarchive.ini has been spawned
+Sat Feb  3 10:05:45 2024 - [emperor] vassal livingarchive.ini is ready to accept requests
+[emperor] *** RAGNAROK EVOKED ***
+Sat Feb  3 10:05:46 2024 - [emperor] stop the uwsgi instance livingarchive.ini
+Sat Feb  3 10:05:48 2024 - [emperor] removed uwsgi instance livingarchive.ini
+Sat Feb  3 10:05:49 2024 - The Emperor is buried.

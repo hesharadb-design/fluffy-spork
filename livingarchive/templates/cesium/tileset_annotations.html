@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cesium@1.122.0/Build/Cesium/Widgets/widgets.css">
+<script src="https://cdn.jsdelivr.net/npm/cesium@1.122.0/Build/Cesium/Cesium.js"></script>
+<style>
+  html, body { height: 100%; }
+  #cesiumContainer { width: 100%; height: 85vh; }
+  /* Optional — make Cesium infobox feel like your Leaflet popups */
+  .cesium-infoBox { border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,.25); font-family: 'Helvetica', sans-serif; }
+  .cesium-infoBox-description h3 { margin-top: 0; font-size: 1.2rem; }
+  .cesium-infoBox-description a { color: #2c7be5; text-decoration: none; }
+</style>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>3D Map</h1>
+    <p><a href="/" class="btn btn-outline-secondary btn-sm">Back to 2D map</a></p>
+  </div>
+
+  <div id="cesiumContainer"></div>
+
+  <script>
+    // 1) Viewer (no Ion token needed)
+    const viewer = new Cesium.Viewer("cesiumContainer", {
+      terrainProvider: new Cesium.EllipsoidTerrainProvider(),
+      baseLayerPicker: true,
+      sceneModePicker: true,
+      timeline: false,
+      animation: false,
+      geocoder: false,
+      requestRenderMode: true
+    });
+
+    // 2) Optional: load your 3D Tiles if you have them
+    Cesium.Cesium3DTileset.fromUrl("{% static 'tileset/tileset.json' %}")
+      .then(ts => viewer.scene.primitives.add(ts))
+      .catch(() => console.log("No tileset found, skipping."));
+
+    // 2b) OR load a single glb/gltf model (simple option)
+    // Cesium.Model.fromGltf({ url: "{% static 'models/my_model.glb' %}" })
+    //   .then(model => viewer.scene.primitives.add(model));
+
+    // 3) Load existing annotations (GeoJSON)
+    fetch("/api/annotations.geojson")
+      .then(r => r.json())
+      .then(geojson => Cesium.GeoJsonDataSource.load(geojson))
+      .then(ds => {
+        viewer.dataSources.add(ds);
+        ds.entities.values.forEach(ent => {
+          ent.billboard = new Cesium.BillboardGraphics({
+            image: "https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/svg/location-sharp.svg",
+            scale: 0.04
+          });
+          ent.label = new Cesium.LabelGraphics({
+            text: (ent.properties && ent.properties.title) || "Annotation",
+            pixelOffset: new Cesium.Cartesian2(0, -30)
+          });
+        });
+        viewer.flyTo(ds);
+      });
+
+    // 4) Click to add annotation
+    const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+    handler.setInputAction((movement) => {
+      const pos = viewer.scene.pickPosition(movement.position);
+      if (!pos) return;
+      const carto = Cesium.Cartographic.fromCartesian(pos);
+      const lon = Cesium.Math.toDegrees(carto.longitude);
+      const lat = Cesium.Math.toDegrees(carto.latitude);
+
+      const title = prompt("Annotation title:");
+      const desc  = prompt("Description:");
+      if (!title) return;
+
+      const ent = viewer.entities.add({
+        position: Cesium.Cartesian3.fromDegrees(lon, lat),
+        name: title,
+        description: `
+          <h3>${title}</h3>
+          <p>${desc || ""}</p>
+        `,
+        point: { pixelSize: 8, color: Cesium.Color.RED }
+      });
+      viewer.selectedEntity = ent;
+
+      // 5) Save to backend (simple JSON file)
+      fetch("/api/annotations/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-CSRFToken": getCsrf() },
+        body: JSON.stringify({
+          type: "Feature",
+          geometry: { type: "Point", coordinates: [lon, lat] },
+          properties: { title, description: desc || "" }
+        })
+      });
+
+      function getCsrf() {
+        // basic CSRF grab from cookie; if you’re not using Django’s CSRF middleware here, you can remove this.
+        const m = document.cookie.match(/csrftoken=([^;]+)/);
+        return m ? m[1] : "";
+      }
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+  </script>
+{% endblock %}
