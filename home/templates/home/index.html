@@ -228,6 +228,8 @@
   <!-- SCRIPT -->
   <script>
   document.addEventListener("DOMContentLoaded", function() {
+    const readMoreUrl = "{{ blog_url|escapejs }}";
+
     // Shared site marker
     const SITE = {
       title: "Mandilbareng / Mardbabay",
@@ -237,7 +239,7 @@
         <h3>Mandilbareng / Mardbabay</h3>
         <p>The rock art at Mandilbareng (Mardbabay) in Western Arnhem Land is part of a living cultural landscape.
         It connects people, ancestors, animals, and seasons.</p>
-        <p><a href="/cms/mandilbareng-mardbabay-a-living-cultural-landscape/" target="_blank">Read more →</a></p>
+        <p><a href="${readMoreUrl}" target="_blank" rel="noopener noreferrer">Read more →</a></p>
       `
     };
 
